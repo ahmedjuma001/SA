@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Safa ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+    max-width: 400px;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+}
+
+p {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+button, a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    border: none;
+    background: white;
+    color: #ff4b7d;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover, a:hover {
+    transform: scale(1.1);
+    background: #ff4b7d;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* Floating hearts */
+.heart {
+    position: absolute;
+    animation: float 6s infinite;
+    opacity: 0.6;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh); }
+    100% { transform: translateY(-10vh); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="step1">
+    <h1>Hey Safa 💖</h1>
+    <p>I made something special just for you...</p>
+    <button onclick="nextStep(2)">Open it ✨</button>
+</div>
+
+<div class="container hidden" id="step2">
+    <h1>You’re amazing 🌸</h1>
+    <p>And I really enjoy every moment with you...</p>
+    <button onclick="nextStep(3)">Continue 💫</button>
+</div>
+
+<div class="container hidden" id="step3">
+    <h1>So I was thinking... 💭</h1>
+    <p>Would you like to go on a special date with me?</p>
+    <button onclick="nextStep(4)">Yes ❤️</button>
+</div>
+
+<div class="container hidden" id="step4">
+    <h1>It's a date! ✨</h1>
+    <p>Can't wait to see you 🌹</p>
+
+    <p><strong>⏰ At 6:00 PM</strong></p>
+    <p>Where to find Ahmed?</p>
+    <p>Ahmed is waiting for you here ❤️</p>
+
+    <a href="https://www.google.com/maps/dir//668+Cafe,+4656,+Seef/@26.1223456,50.4889344,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3e49a54997d50705:0x43075ee0e419fc13!2m2!1d50.5568241!2d26.2345892?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+        Open Location 📍
+    </a>
+</div>
+
+<script>
+function nextStep(step) {
+    document.querySelectorAll('.container').forEach(el => el.classList.add('hidden'));
+    document.getElementById('step' + step).classList.remove('hidden');
+}
+
+for (let i = 0; i < 25; i++) {
+    let heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (Math.random() * 20 + 10) + "px";
+    heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+    document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
