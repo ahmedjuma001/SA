@@ -14,46 +14,54 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    background: linear-gradient(135deg, #2b0000, #5c0a0a, #800000);
     font-family: 'Poppins', sans-serif;
-    color: white;
+    color: #fff;
     overflow: hidden;
 }
 
 .container {
     text-align: center;
     animation: fadeIn 1.5s ease;
-    max-width: 400px;
+    max-width: 420px;
+    padding: 40px;
+    border-radius: 25px;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 30px rgba(128, 0, 0, 0.6);
 }
 
 h1 {
     font-family: 'Great Vibes', cursive;
-    font-size: 48px;
+    font-size: 52px;
+    color: #ffcccc;
 }
 
 p {
     font-size: 18px;
     margin: 15px 0;
+    color: #f5dcdc;
 }
 
 button, a {
     display: inline-block;
-    margin-top: 10px;
-    padding: 12px 25px;
+    margin-top: 12px;
+    padding: 12px 28px;
     border-radius: 30px;
     text-decoration: none;
     border: none;
-    background: white;
-    color: #ff4b7d;
+    background: linear-gradient(135deg, #800000, #b30000);
+    color: white;
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
 }
 
 button:hover, a:hover {
     transform: scale(1.1);
-    background: #ff4b7d;
-    color: white;
+    background: linear-gradient(135deg, #b30000, #ff1a1a);
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.7);
 }
 
 .hidden {
@@ -69,12 +77,13 @@ button:hover, a:hover {
 .heart {
     position: absolute;
     animation: float 6s infinite;
-    opacity: 0.6;
+    opacity: 0.4;
+    color: #ff4d4d;
 }
 
 @keyframes float {
-    0% { transform: translateY(100vh); }
-    100% { transform: translateY(-10vh); }
+    0% { transform: translateY(100vh) scale(1); }
+    100% { transform: translateY(-10vh) scale(1.4); }
 }
 </style>
 </head>
@@ -88,8 +97,8 @@ button:hover, a:hover {
 </div>
 
 <div class="container hidden" id="step2">
-    <h1>You’re amazing 🌸</h1>
-    <p>And I really enjoy every moment with you...</p>
+    <h1>You’re amazing 🌹</h1>
+    <p>Every moment with you feels different...</p>
     <button onclick="nextStep(3)">Continue 💫</button>
 </div>
 
@@ -107,7 +116,7 @@ button:hover, a:hover {
     <p>Where to find Ahmed?</p>
     <p>Ahmed is waiting for you here ❤️</p>
 
-    <a href="google.com/maps?rlz=1C1GCEA_enBH1172BH1174&um=1&ie=UTF-8&fb=1&gl=bh&sa=X&geocode=KQOQIfCOukk-MVqeIN0zvRyj&daddr=Building+3,+Block+515,+Road+15,+Saar,+Bahrain+Saar+BH+828" target="_blank">
+    <a href="https://www.google.com/maps?rlz=1C1GCEA_enBH1172BH1174&um=1&ie=UTF-8&fb=1&gl=bh&sa=X&geocode=KQOQIfCOukk-MVqeIN0zvRyj&daddr=Building+3,+Block+515,+Road+15,+Saar,+Bahrain+Saar+BH+828" target="_blank">
         Open Location 📍
     </a>
 </div>
